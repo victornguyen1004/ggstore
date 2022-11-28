@@ -4,10 +4,10 @@ import Contact from "../pages/Contact";
 import About from "../pages/About";
 
 const publicRoutes = [
-  { name: "Trang chủ", path: "/", component: <Home /> },
-  { name: "Về chúng tôi", path: "/about", component: <About /> },
-  { name: "Cửa hàng", path: "/product", component: <Product /> },
-  { name: "Liên hệ", path: "/contact", component: <Contact /> },
+  { name: "HOME", path: "/", component: <Home /> },
+  { name: "ABOUT US", path: "/about", component: <About /> },
+  { name: "PRODUCT", path: "/product", component: <Product /> },
+  { name: "CONTACT", path: "/contact", component: <Contact /> },
 ];
 
 export { publicRoutes };
