@@ -22,7 +22,7 @@ function Home() {
               levels in games, there’s levels to all of us. And where we go
               next, is up to us.
             </h3>
-            <Link to={"/product"} className="bg-blue-500 text-white font-bold py-2 rounded-3xl hover:bg-violet-400 ease-in-out duration-300 flex justify-center">BROWSE PRODUCT</Link>
+            <Link to={"/product"} className="bg-blue-500 text-white font-bold py-2 rounded-3xl border-2 border-blue-500 hover:text-blue-500 hover:bg-white ease-in-out duration-300 flex justify-center">BROWSE PRODUCT</Link>
           </div>
         </div>
       </DefaultWrapper>
