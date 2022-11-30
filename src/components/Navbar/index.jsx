@@ -18,10 +18,10 @@ function Navbar() {
 
       <div className="text-mg font-bold">
         <button className="mr-4 rounded-3xl border-2 border-blue-500 bg-blue-500 py-2 px-6 text-white shadow duration-300 ease-in-out hover:bg-white hover:text-blue-500">
-          Đăng ký
+        <p><a href="/src/components/Login/index.html">Đăng nhập</a></p>
         </button>
         <button className="rounded-3xl border-2 border-white px-4 py-2 text-blue-500 duration-300 ease-in-out  hover:border-[#f3f5f9] hover:bg-[#f3f5f9]">
-          Đăng nhập
+        <p><a href=".">Đăng ký</a></p>
         </button>
       </div>
     </div>
