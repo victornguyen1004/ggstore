@@ -4,10 +4,10 @@ import Contact from "../pages/Contact";
 import About from "../pages/About";
 
 const publicRoutes = [
-  { name: "HOME", path: "/", component: <Home /> },
-  { name: "ABOUT US", path: "/about", component: <About /> },
-  { name: "PRODUCT", path: "/product", component: <Product /> },
-  { name: "CONTACT", path: "/contact", component: <Contact /> },
+  { path: "/", component: <Home /> },
+  { path: "/about", component: <About /> },
+  { path: "/product", component: <Product /> },
+  { path: "/contact", component: <Contact /> },
 ];
 
 export { publicRoutes };
