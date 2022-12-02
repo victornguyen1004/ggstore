@@ -23,12 +23,18 @@ function Navbar() {
         </Link>
       </div>
       <div className="text-mg font-bold">
-        <button className="mr-4 rounded-3xl border-2 border-blue-500 bg-blue-500 py-2 px-6 text-white shadow duration-300 ease-in-out hover:bg-white hover:text-blue-500">
-            <Link to={"/signup"} className="">Sign up</Link>
-        </button>
-        <button className="rounded-3xl border-2 border-white px-4 py-2 text-blue-500 duration-300 ease-in-out  hover:border-[#f3f5f9] hover:bg-[#f3f5f9]">
-          <Link to={"/login"} className="">Login</Link>
-        </button>
+        <Link
+          to={"/signup"}
+          className="mr-4 rounded-3xl border-2 border-blue-500 bg-blue-500 py-2 px-6 text-white shadow duration-300 ease-in-out hover:bg-white hover:text-blue-500"
+        >
+          Sign up
+        </Link>
+        <Link
+          to={"/login"}
+          className="rounded-3xl border-2 border-white px-4 py-2 text-blue-500 duration-300 ease-in-out  hover:border-[#f3f5f9] hover:bg-[#f3f5f9]"
+        >
+          Login
+        </Link>
       </div>
     </div>
   );
