@@ -7,9 +7,7 @@ import { useState, useEffect } from "react";
 function Signup() {
   const [optionstate, setOptionstate] = useState();
 
-  useEffect(() => {
-    setOptionstate(false);
-  }, []);
+  useEffect(() => {}, [optionstate]);
 
   const ShowOptions = () => {
     optionstate ? setOptionstate(false) : setOptionstate(true);
@@ -39,22 +37,26 @@ function Signup() {
           </Link>
         </>
       );
-    }
-    else {
+    } else {
       return (
-        <button className="text-sm font-medium mt-8" onClick={ShowOptions}>
-          MORE OPTIONS
-        </button>
+        <div className="custom-hover relative">
+          <button className="custom-hover mt-8 text-sm font-medium" onClick={ShowOptions}>
+            MORE OPTIONS
+          </button>
+        </div>
       );
     }
-  }
+  };
 
   return (
     <div className="flex h-screen flex-col items-center px-28">
       <div className="relative flex h-[80px] w-full items-center justify-between py-4">
         <BackButton />
         <div className="custom-hover relative">
-          <Link to={"/login"} className="custom-hover py-2 font-medium">
+          <Link
+            to={"/login"}
+            className="custom-hover py-2 font-medium"
+          >
             LOG IN
           </Link>
         </div>
@@ -83,7 +85,7 @@ function Signup() {
           </Link>
           {RenderOptions()}
         </div>
-        <div className="text-center text-xs text-gray-400">
+        <div className="custom-hover text-center text-xs text-gray-400">
           Secure Login with reCAPTCHA subject to Google
         </div>
       </div>
