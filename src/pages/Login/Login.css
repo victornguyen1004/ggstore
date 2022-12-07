@@ -1,0 +1,19 @@
+.custom-hover::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all ease-in-out 0.5s;
+}
+
+.custom-hover:hover .custom-hover::after {
+  width: 100%;
+}
+
+.custom-input:active {
+    
+}
+

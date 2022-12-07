@@ -63,7 +63,7 @@ function Signup() {
       </div>
       <div className="flex h-[calc(100vh-80px)] w-full min-w-[320px] max-w-[360px] flex-col items-center justify-evenly">
         <div className="text-2xl font-bold">Create Your Account</div>
-        <div className="text-center text-sm text-gray-400">
+        <div className="text-center text-sm text-zinc-400">
           By creating an account, you agree to our{" "}
           <Link className="underline">Terms of Service</Link> and have read and
           understood the <Link className="underline">Privacy Policy</Link>.
@@ -85,7 +85,7 @@ function Signup() {
           </Link>
           {RenderOptions()}
         </div>
-        <div className="custom-hover text-center text-xs text-gray-400">
+        <div className="custom-hover text-center text-xs text-zinc-400">
           Secure Login with reCAPTCHA subject to Google
         </div>
       </div>
