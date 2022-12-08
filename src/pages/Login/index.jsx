@@ -19,7 +19,7 @@ function Login() {
         <div className="flex w-full justify-between">
           {/* LOGIN remove p-2 afterward*/}
           <div className="flex-1 p-2">
-            <div className="">
+            <div className="z">
               <label
                 htmlFor="email"
                 className="text-xs font-bold text-zinc-500"
@@ -28,7 +28,7 @@ function Login() {
               </label>
               <input
                 type="email"
-                className="mb-4 w-full border-b border-zinc-300 pt-3 pb-5 focus:outline-none"
+                className="mb-4 w-full border-b border-zinc-300 pt-3 pb-5 focus:border-zinc-600 focus:outline-none"
                 placeholder="name@example.com"
               />
             </div>
@@ -41,12 +41,12 @@ function Login() {
               </label>
               <input
                 type="password"
-                className="mb-8 w-full border-b border-zinc-300 pr-8 pt-3 pb-5 focus:outline-none"
+                className="mb-8 w-full border-b border-zinc-300 pr-8 pt-3 pb-5 focus:border-zinc-600 focus:outline-none"
                 placeholder="Password"
               />
-              <button className="absolute bottom-1/2 right-0 translate-y-2 rounded-full p-1 hover:bg-zinc-300">
+              <button className="absolute bottom-1/2 right-1 translate-y-2 rounded-full p-1 hover:bg-zinc-300">
                 {}
-                
+
                 <i class="fa-solid fa-eye w-6"></i>
                 <i class="fa-solid fa-eye-slash hidden w-6"></i>
               </button>
@@ -89,7 +89,9 @@ function Login() {
           </div>
         </div>
         <div className="custom-hover relative">
-          <button className="custom-hover text-center text-sm font-semibold">CAN'T LOG IN?</button>
+          <button className="custom-hover text-center text-sm font-semibold">
+            CAN'T LOG IN?
+          </button>
         </div>
         <div className="custom-hover text-center text-sm text-zinc-400">
           Secure Login with reCAPTCHA subject to Google

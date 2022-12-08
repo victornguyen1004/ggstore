@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Router>
-        <div className="App font-custom">
+        <div className="App font-custom bg-[#fafafa]">
           <Routes>
             {publicRoutes.map((route, index) => {
               return (
