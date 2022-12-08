@@ -111,7 +111,7 @@ function Home() {
         <div className="mb-16 flex w-full justify-center">
           <Link
             to={"/product"}
-            className="rounded-3xl border-2 border-blue-500 bg-blue-500 px-8 py-2 text-sm font-medium text-white duration-300 ease-in-out shadow-md hover:border-blue-500 hover:bg-white hover:text-blue-500"
+            className="rounded-3xl border-2 border-blue-500 bg-blue-500 px-8 py-2 text-sm font-medium text-white shadow-md duration-300 ease-in-out hover:border-blue-500 hover:bg-white hover:text-blue-500"
           >
             Browse All Items
           </Link>
@@ -131,7 +131,7 @@ function Home() {
           <CustomerItem image={images.alienware} />
         </div>
       </DefaultWrapper>
-      <div className="flex justify-between bg-zinc-900 px-12 text-[#f4f6f5] text-xs lg:px-28 lg:py-12">
+      <div className="flex justify-between bg-zinc-900 px-12 text-xs text-[#f4f6f5] lg:px-28 lg:py-12">
         <div className="flex flex-col justify-between">
           <Link to={"/"} className="">
             <img src={images.logoFullwhite} alt="" className="w-36" />
@@ -179,7 +179,8 @@ function Home() {
             </Link>
           </div>
           <span className="text-right">
-            <i className="fa-regular fa-copyright pr-1"></i><span className="font-semibold">GGStore 2022</span>
+            <i className="fa-regular fa-copyright pr-1"></i>
+            <span className="font-semibold">GGStore 2022</span>
           </span>
         </div>
       </div>
