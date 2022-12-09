@@ -28,7 +28,7 @@ function Login() {
               </label>
               <input
                 type="email"
-                className="mb-4 w-full border-b border-zinc-300 pt-3 pb-5 focus:border-zinc-600 focus:outline-none"
+                className="mb-4 w-full border-b border-zinc-300  bg-inherit pt-3 pb-5 focus:border-zinc-600 focus:outline-none"
                 placeholder="name@example.com"
               />
             </div>
@@ -41,7 +41,7 @@ function Login() {
               </label>
               <input
                 type="password"
-                className="mb-8 w-full border-b border-zinc-300 pr-8 pt-3 pb-5 focus:border-zinc-600 focus:outline-none"
+                className="mb-8 w-full border-b border-zinc-300 bg-inherit pr-8 pt-3 pb-5 focus:border-zinc-600 focus:outline-none"
                 placeholder="Password"
               />
               <button className="absolute bottom-1/2 right-1 translate-y-2 rounded-full p-1 hover:bg-zinc-300">
