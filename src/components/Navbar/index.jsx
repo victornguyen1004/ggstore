@@ -25,13 +25,13 @@ function Navbar() {
       <div className="md:block hidden text-mg font-bold">
         <Link
           to={"/signup"}
-          className="mr-4 rounded-3xl border-2 border-blue-500 bg-white py-2 px-6 text-blue-500 shadow-sm duration-300 ease-in-out hover:bg-blue-500 hover:text-white"
+          className="mr-4 rounded-3xl border-2 border-blue-500 bg-inherit py-2 px-6 text-blue-500 shadow-sm duration-300 ease-in-out hover:bg-blue-500 hover:text-white"
         >
           Sign up
         </Link>
         <Link
           to={"/login"}
-          className="rounded-3xl border-2 border-white px-6 py-2 text-blue-500 duration-300 ease-in-out  hover:border-[#f3f5f9] hover:bg-[#f3f5f9]"
+          className="rounded-3xl border-2 border-transparent px-6 py-2 text-blue-500 duration-300 ease-in-out  hover:border-[#f3f5f9] hover:bg-[#f3f5f9]"
         >
           Login
         </Link>
