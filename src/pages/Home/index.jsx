@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 import ProductSection from "../../components/Product/ProductSection";
 import CustomerSection from "../../components/Customer/CustomerSection";
+import products from "../../assets/products";
+
+const firstEightProducts = products.slice(0, 8);
 
 function Home() {
   return (
@@ -35,13 +38,13 @@ function Home() {
             </h3>
             <Link
               to={"/product"}
-              className="flex w-full justify-center rounded-3xl border-2 border-blue-500 bg-blue-500 py-2 px-4 font-bold text-white shadow-md duration-300 ease-in-out hover:bg-white hover:text-blue-500 md:w-auto md:self-start"
+              className="flex w-full justify-center rounded-3xl border-2 border-blue-500 bg-blue-500 py-2 px-4 font-bold text-white shadow-md duration-300 ease-in-out hover:bg-[#fafafa] hover:text-blue-500 md:w-auto md:self-start"
             >
               BROWSE PRODUCT
             </Link>
           </div>
         </div>
-        <ProductSection title={"Top Product"} button={true}/>
+        <ProductSection products={firstEightProducts} title={"Top Product"} button={true} />
         <CustomerSection />
       </DefaultWrapper>
       <Footer />

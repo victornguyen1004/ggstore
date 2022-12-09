@@ -1,7 +1,6 @@
-import products from "../../../assets/products";
-import ProductCategory from "./ProductCategory";
-import ProductContainer from "./ProductContainer";
-import ProductItem from "./ProductItem";
+import ProductCategory from "../ProductCategory";
+import ProductContainer from "../ProductContainer";
+import ProductItem from "../ProductItem";
 import { Link } from "react-router-dom";
 
 function ProductSection(props) {
@@ -32,7 +31,7 @@ function ProductSection(props) {
         </div>
         <ProductCategory />
         <ProductContainer>
-          {products.map((product) => {
+          {props.products.map((product) => {
             return (
               <ProductItem
                 key={product.id}

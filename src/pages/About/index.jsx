@@ -1,11 +1,8 @@
-import Navbar from "../../components/Navbar";
+import Developing from "../../components/Developing";
 
 function About() {
   return (
-    <>
-      <Navbar />
-      This is About page
-    </>
+    <Developing />
   );
 }
 

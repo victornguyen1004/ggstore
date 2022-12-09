@@ -1,11 +1,8 @@
-import Navbar from "../../components/Navbar";
+import Developing from "../../components/Developing";
 
 function Contact() {
   return (
-    <>
-      <Navbar />
-      <div className="">This is Contact page</div>
-    </>
+    <Developing />
   );
 }
 

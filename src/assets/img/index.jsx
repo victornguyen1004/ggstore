@@ -1,7 +1,6 @@
 const images = {
   logoFull: require("./logofull.png"),
   logo: require("./logo.png"),
-  pochita: require("../img/pochita.png"),
   banner: require("../img/banner.png"),
   signupBanner: require("../img/signup.png"),
   googleMono: require("../img/google_mono.png"),
@@ -29,6 +28,7 @@ const images = {
   g733: require("../img/g733.png"),
   mouse2: require("../img/mouse2.png"),
   webcam: require("../img/webcam.png"),
+  building: require("../img/building.png"),
 };
 
 export default images;
