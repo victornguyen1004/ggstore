@@ -1,5 +1,5 @@
 function DefaultWrapper(props) {
-    return ( <div className="lg:px-28 px-12 relative">
+    return ( <div className="lg:px-28 px-4 relative">
         {props.children}
     </div> );
 }

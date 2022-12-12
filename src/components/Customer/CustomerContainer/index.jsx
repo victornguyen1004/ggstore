@@ -1,6 +1,6 @@
 function CustomerContainer(props) {
   return (
-    <div className="mb-12 grid grid-cols-12 grid-rows-2 gap-x-12">
+    <div className="mb-12 grid grid-cols-12 gap-4">
       {props.children}
     </div>
   );
