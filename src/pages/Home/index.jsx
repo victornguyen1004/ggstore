@@ -44,7 +44,7 @@ function Home() {
             </Link>
           </div>
         </div>
-        <ProductSection products={firstEightProducts} title={"Top Product"} button={true} />
+        <ProductSection products={firstEightProducts} title={"Top Product"} button={true} category={false} />
         <CustomerSection />
       </DefaultWrapper>
       <Footer />

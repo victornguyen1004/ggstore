@@ -4,7 +4,6 @@ import ProductItem from "../ProductItem";
 import { Link } from "react-router-dom";
 
 function ProductSection(props) {
-
   function HandleButtonRender(props) {
     if (props.button) {
       return (
@@ -20,16 +19,22 @@ function ProductSection(props) {
     }
   }
 
+  function HandleCategoryRender(props) {
+    if (props.category) {
+      return <ProductCategory />;
+    }
+  }
+
   return (
     <>
       <div className="mt-12">
         <div className="text-center text-2xl font-bold">{props.title}</div>
-        <div className="mx-auto mt-4 w-[720px] text-center font-medium text-zinc-400">
+        <div className="my-4 text-center font-medium text-zinc-400 lg:px-36">
           Whether you're recording a podcast, starting your DIY project, or
           doing a shoot, start with us. We do research for you so you can spend
           less time searching, and more time doing.
         </div>
-        <ProductCategory />
+        {HandleCategoryRender(props)}
         <ProductContainer>
           {props.products.map((product) => {
             return (
@@ -44,7 +49,6 @@ function ProductSection(props) {
           })}
         </ProductContainer>
       </div>
-
       {HandleButtonRender(props)}
     </>
   );

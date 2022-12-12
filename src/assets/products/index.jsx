@@ -51,7 +51,7 @@ const products = [
     image: images.rogstrig,
   },
   {
-    id: 0,
+    id: 7,
     name: "Logitech G733",
     price: 169.99,
     rating: 4.9,

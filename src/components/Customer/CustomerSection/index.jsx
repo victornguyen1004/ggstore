@@ -9,8 +9,8 @@ function CustomerSection() {
           Trusted Customers
         </div>
         <CustomerContainer>
-          {customers.map((customer, key) => {
-            return <CustomerItem key={key} image={customer} />;
+          {customers.map((customer) => {
+            return <CustomerItem key={customer.id} image={customer.image} href={customer.href} />;
           })}
         </CustomerContainer>
       </>

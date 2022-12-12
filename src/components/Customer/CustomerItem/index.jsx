@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
-
 function CustomerItem(props) {
-    return (
-      <Link to={""} className="col-span-3">
-        <img src={props.image} alt="" className="w-full object-contain h-[100px]" />
-      </Link>
-    );
+  return (
+    <a
+      href={props.href}
+      className="col-span-12 flex items-center justify-center md:col-span-4 lg:col-span-3"
+    >
+      <img src={props.image} alt="" className="h-[36px] object-contain" />
+    </a>
+  );
 }
 
 export default CustomerItem;

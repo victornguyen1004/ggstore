@@ -8,6 +8,7 @@ import Login from "../pages/Login";
 
 const publicRoutes = [
   { path: "/", component: <Home /> },
+  { path: "/home", component: <Home /> },
   { path: "/about", component: <About /> },
   { path: "/product", component: <Product /> },
   { path: "/contact", component: <Contact /> },

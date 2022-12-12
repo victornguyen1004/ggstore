@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Router>
-        <div className="App font-custom bg-[#fafafa]">
+        <div className="App font-custom bg-[#fafafa] scrollbar  ">
           <Routes>
             {publicRoutes.map((route, index) => {
               return (
