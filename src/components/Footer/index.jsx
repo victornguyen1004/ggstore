@@ -2,61 +2,64 @@ import images from "../../assets/img";
 import { Link } from "react-router-dom";
 
 function Footer() {
-    return (
-      <div className="flex justify-between bg-zinc-900 px-12 text-xs text-[#f4f6f5] shadow-[0_-16px_16px_-16px_rgba(0,0,0,0.3)] lg:px-28 lg:py-12">
-        <div className="flex flex-col justify-between">
-          <Link to={"/"} className="">
-            <img src={images.logoFullwhite} alt="" className="w-36" />
-          </Link>
-          <div className="">
-            <Link to={""} className="pr-4">
-              Privacy Policy
-            </Link>
-            <Link to={""}>Terms & Conditions</Link>
-          </div>
-        </div>
-        <div className="grid grid-cols-2 grid-rows-4 gap-x-8 gap-y-4 font-medium">
-          <Link to={""} className="">
+  return (
+    <div className="flex flex-col bg-zinc-900 text-xs text-[#f4f6f5] shadow-[0_-16px_16px_-16px_rgba(0,0,0,0.3)] md:px-28 md:py-8">
+      <div className="mb-8 flex flex-col justify-between md:flex-row">
+        <Link to={"/"} className="mb-8">
+          <img src={images.logoFullwhite} alt="" className="w-36" />
+        </Link>
+        <div className="mb-8 grid grid-cols-2 grid-rows-4 gap-x-2 gap-y-4 font-medium md:mb-0">
+          <Link to={""} className="p-2 ">
             Rentals
           </Link>
-          <Link to={""} className="">
+          <Link to={""} className="p-2 ">
             Support
           </Link>
-          <Link to={""} className="">
+          <Link to={""} className="p-2 ">
             Remote/Virtual Assist
           </Link>
-          <Link to={""} className="">
+          <Link to={""} className="p-2 ">
             Contact Team
           </Link>
-          <Link to={""} className="">
+          <Link to={""} className="p-2 ">
             List your gear
           </Link>
-          <Link to={""} className="">
+          <Link to={""} className="p-2 ">
             Careers
           </Link>
-          <Link to={""} className="">
+          <Link to={""} className="p-2 ">
             How it works
           </Link>
         </div>
-        <div className="flex flex-col justify-between">
-          <div className="">
-            <Link to={""} className="p-2">
-              <i class="fa-brands fa-square-facebook"></i>
+        <div className="flex justify-evenly">
+          
+            <Link to={""} className="px-4 py-2">
+              <i class="fa-brands fa-square-facebook text-xl md:text-sm"></i>
             </Link>
-            <Link to={""} className="mx-2 p-2">
-              <i class="fa-brands fa-square-twitter"></i>
+            <Link to={""} className="px-4 py-2">
+              <i class="fa-brands fa-square-twitter text-xl md:text-sm"></i>
             </Link>
-            <Link to={""} className="p-2">
-              <i class="fa-brands fa-square-instagram"></i>
+            <Link to={""} className="px-4 py-2">
+              <i class="fa-brands fa-square-instagram text-xl md:text-sm"></i>
             </Link>
-          </div>
-          <span className="text-right">
-            <i className="fa-regular fa-copyright pr-1"></i>
-            <span className="font-semibold">GGStore 2022</span>
-          </span>
+          
         </div>
       </div>
-    );
+
+      <div className="flex justify-between">
+        <span className="text-right">
+          <i className="fa-regular fa-copyright pr-1"></i>
+          <span className="font-semibold">GGStore 2022</span>
+        </span>
+        <div className="">
+          <Link to={""} className="pr-4">
+            Privacy Policy
+          </Link>
+          <Link to={""}>Terms & Conditions</Link>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Footer;
