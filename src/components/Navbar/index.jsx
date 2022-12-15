@@ -1,9 +1,55 @@
 import { Link } from "react-router-dom";
 import images from "../../assets/img";
+import { useState, useEffect } from "react";
 
 function Navbar() {
+  const [menu, setMenu] = useState(false);
+
+  const HandleMenuOnclick = () => {
+    if (menu) {
+      setMenu(false);
+    } else {
+      setMenu(true);
+    }
+  };
+
+  const RenderMenu = () => {
+    if (menu) {
+      return (
+        <div className="absolute right-0 top-full flex w-screen flex-col border bg-[#fafafa] shadow">
+          <Link
+            to={"/"}
+            className="w-full border border-zinc-100 py-4 text-center"
+          >
+            Home
+          </Link>
+          <Link
+            to={"/about"}
+            className="w-full border border-zinc-100 py-4 text-center"
+          >
+            About us
+          </Link>
+          <Link
+            to={"/product"}
+            className="w-full border border-zinc-100 py-4 text-center"
+          >
+            Product
+          </Link>
+          <Link
+            to={"/contact"}
+            className="w-full border border-zinc-100 py-4 text-center"
+          >
+            Contact
+          </Link>
+        </div>
+      );
+    }
+  }
+
+  useEffect(() => {}, [menu]);
+
   return (
-    <div className="flex h-[80px] sticky top-0 z-50 bg-[#fafafa] border-b md:border-b-0 shadow md:shadow-none items-center justify-between px-4 text-black md:px-12  lg:px-28">
+    <div className="sticky top-0 z-50 flex h-[80px] items-center justify-between border-b bg-[#fafafa] px-4 text-black shadow md:border-b-0 md:px-12 md:shadow-none  lg:px-28">
       <Link className="w-28" to={"/"}>
         <img src={images.logoFull} alt="logo.png" className="" />
       </Link>
@@ -37,26 +83,11 @@ function Navbar() {
         </Link>
       </div>
 
-      <div className="relative h-full flex items-center md:hidden">
-        <button className="">
+      <div className="flex h-full items-center lg:hidden">
+        <button className="" onClick={() => HandleMenuOnclick()}>
           <i class="fa-solid fa-bars p-4 text-xl"></i>
         </button>
-        <div className="absolute right-0 bottom-0 translate-y-full">
-          <div className="flex flex-col w-screen px-12 py-4 bg-[#fafafa]">
-            <Link to={"/"} className="">
-              Home
-            </Link>
-            <Link to={"/about"} className="">
-              About us
-            </Link>
-            <Link to={"/product"} className="">
-              Product
-            </Link>
-            <Link to={"/contact"} className="">
-              Contact
-            </Link>
-          </div>
-        </div>
+        {RenderMenu()}
       </div>
     </div>
   );
