@@ -29,6 +29,8 @@ const images = {
   mouse2: require("../img/mouse2.png"),
   webcam: require("../img/webcam.png"),
   building: require("../img/building.png"),
+  about: require("../img/about.png"),
+  aboutTitle: require("../img/abouttitle.png"),
 };
 
 export default images;
