@@ -4,10 +4,10 @@ import DefaultWrapper from "../../components/Wrappers/Default";
 
 function About() {
   return (
-    <div className="relative ">
+    <div className="relative bg-[#1f1f1f] min-h-screen">
       <Navbar variant={"about"} />
       <div
-        className="absolute top-0 left-0 min-h-screen w-full bg-fixed"
+        className="absolute top-0 left-0 h-[360px] w-full bg-fixed md:min-h-screen"
         style={{
           backgroundImage: `url(${images.about})`,
           backgroundSize: "cover",
@@ -17,9 +17,9 @@ function About() {
           <img src={images.aboutTitle} alt="" className="w-2/3 md:w-1/2" />
         </div>
       </div>
-      <div className="mt-[calc(100vh-80px)] h-[1600px] py-12 bg-[#1f1f1f]">
+      <div className="mt-[260px] py-12 text-white md:mt-[calc(100vh-80px)]">
         <DefaultWrapper>
-          <div className=" text-2xl text-white">Bla bla</div>
+          <div className="flex">Coming soon...</div>
         </DefaultWrapper>
       </div>
     </div>

@@ -31,6 +31,7 @@ const images = {
   building: require("../img/building.png"),
   about: require("../img/about.png"),
   aboutTitle: require("../img/abouttitle.png"),
+  mailbox: require("../img/mailbox.png"),
 };
 
 export default images;

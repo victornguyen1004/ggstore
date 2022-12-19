@@ -51,12 +51,11 @@ function Signup() {
   return (
     <div className="flex h-screen flex-col items-center px-28">
       <div className="relative flex h-[80px] w-full items-center justify-between py-4">
-        <BackButton />
-        <div className="custom-hover relative">
-          <Link
-            to={"/login"}
-            className="custom-hover py-2 font-medium"
-          >
+        <div className="-translate-x-24 md:translate-x-0">
+          <BackButton />
+        </div>
+        <div className="custom-hover relative translate-x-14 md:translate-x-0">
+          <Link to={"/login"} className="custom-hover py-2 font-medium">
             LOG IN
           </Link>
         </div>
