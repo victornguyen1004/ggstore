@@ -5,21 +5,21 @@ import "../Login/Login.css";
 
 function Login() {
   return (
-    <div className="flex h-screen flex-col items-center px-28">
+    <div className="flex md:h-screen flex-col items-center px-4 lg:px-28">
       <div className="relative flex h-[80px] w-full items-center justify-between py-4">
         <BackButton />
-        <div className="custom-hover relative">
-          <Link to={"/signup"} className="custom-hover py-2 font-medium">
+        <div className="custom-hover relative -translate-x-8 md:translate-x-0">
+          <Link to={"/signup"} className="custom-hover py-2 font-medium ">
             SIGN UP
           </Link>
         </div>
       </div>
-      <div className="flex h-[calc(100vh-80px)] w-full min-w-[720px] max-w-[840px] flex-col items-center justify-evenly">
-        <div className="text-2xl font-bold">Login into GGStore</div>
-        <div className="flex w-full justify-between">
+      <div className="flex h-[calc(100vh-80px)] w-full  flex-col  items-center justify-evenly lg:px-24">
+        <div className="text-2xl font-bold mb-4">Login into GGStore</div>
+        <div className="flex w-full flex-col justify-between md:flex-row">
           {/* LOGIN remove p-2 afterward*/}
           <div className="flex-1 p-2">
-            <div className="z">
+            <div className="">
               <label
                 htmlFor="email"
                 className="text-xs font-bold text-zinc-500"
@@ -56,13 +56,13 @@ function Login() {
             </button>
           </div>
           {/* DIVIDER */}
-          <div className="flex h-full flex-col items-center">
-            <div className="h-full w-[1px] bg-zinc-300"></div>
+          <div className="h-full flex-col items-center flex my-1">
+            <div className="h-full w-[1px] hidden md:block bg-zinc-300"></div>
             <div className="px-8 py-2 text-xs font-bold text-zinc-500">OR</div>
-            <div className="h-full w-[1px] bg-zinc-300"></div>
+            <div className="h-full w-[1px] hidden md:block bg-zinc-300"></div>
           </div>
           {/* OTHER OPTIONS */}
-          <div className="flex h-full flex-1 flex-col justify-center">
+          <div className="flex h-full flex-1 flex-col justify-center px-2 md:px-0">
             <Link className="flex w-full justify-between border border-black p-5">
               <img
                 src={images.google}
@@ -88,12 +88,12 @@ function Login() {
             </Link>
           </div>
         </div>
-        <div className="custom-hover relative">
+        <div className="custom-hover relative mt-4">
           <button className="custom-hover text-center text-sm font-semibold">
             CAN'T LOG IN?
           </button>
         </div>
-        <div className="custom-hover text-center text-sm text-zinc-400">
+        <div className="custom-hover text-center text-sm text-zinc-400 mb-4">
           Secure Login with reCAPTCHA subject to Google
         </div>
       </div>
