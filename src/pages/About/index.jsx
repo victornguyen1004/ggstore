@@ -7,7 +7,7 @@ function About() {
     <div className="relative min-h-screen bg-[#1f1f1f]">
       <Navbar variant={"about"} />
       <div
-        className=" h-[360px] w-full bg-fixed md:min-h-screen"
+        className="absolute top-0 left-0 h-[360px] w-full bg-fixed md:min-h-screen"
         style={{
           backgroundImage: `url(${images.about})`,
           backgroundSize: "cover",
@@ -17,7 +17,7 @@ function About() {
           <img src={images.aboutTitle} alt="" className="w-2/3 md:w-1/2" />
         </div>
       </div>
-      <div className="mt-[230px] py-12 text-white md:mt-[calc(100vh-80px)]">
+      <div className="mt-[320px] py-12 text-white md:mt-[calc(100vh-80px)]">
         <DefaultWrapper>
           <div className="grid grid-cols-12 gap-12 px-24">
             <div className="col-span-6">
