@@ -16,12 +16,12 @@ function Navbar(props) {
   const RenderNavbar = () => {
     if (props.variant === "about") {
       return (
-        <div className="fixed top-0 left-0 right-0 z-50 flex h-[80px] items-center justify-between bg-none px-4 text-black md:px-12  lg:px-28">
+        <div className="sticky top-0 z-50 flex h-[80px] items-center justify-between bg-none px-4 text-black md:px-12  lg:px-28">
           <Link className="w-28" to={"/"}>
             <img src={images.logoFullwhite} alt="logo.png" className="" />
           </Link>
 
-          <div className="hidden items-center font-semibold text-white lg:flex">
+          <div className="hidden items-center -z-1 font-semibold text-white lg:flex">
             <Link to={"/"} className="mr-2 px-4 py-3">
               Home
             </Link>
