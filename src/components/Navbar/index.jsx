@@ -16,7 +16,7 @@ function Navbar(props) {
   const RenderNavbar = () => {
     if (props.variant === "about") {
       return (
-        <div className="sticky top-0 z-50 flex h-[80px] items-center justify-between bg-none px-4 text-black md:px-12  lg:px-28">
+        <div className="fixed top-0 left-0 right-0 z-50 flex h-[80px] items-center justify-between bg-none px-4 text-black md:px-12  lg:px-28">
           <Link className="w-28" to={"/"}>
             <img src={images.logoFullwhite} alt="logo.png" className="" />
           </Link>
@@ -26,7 +26,7 @@ function Navbar(props) {
               Home
             </Link>
             <Link to={"/about"} className="mr-2 px-4 py-3">
-              About us
+              About
             </Link>
             <Link to={"/product"} className="mr-2 px-4 py-3">
               Product
@@ -70,7 +70,7 @@ function Navbar(props) {
               Home
             </Link>
             <Link to={"/about"} className="mr-2 px-4 py-3">
-              About us
+              About
             </Link>
             <Link to={"/product"} className="mr-2 px-4 py-3">
               Product
@@ -118,7 +118,7 @@ function Navbar(props) {
             to={"/about"}
             className="w-full border border-zinc-100 py-4 text-center"
           >
-            About us
+            About
           </Link>
           <Link
             to={"/product"}
