@@ -32,6 +32,9 @@ const images = {
   about: require("../img/about.png"),
   aboutTitle: require("../img/abouttitle.png"),
   mailbox: require("../img/mailbox.png"),
+  reactjs: require("../img/reactjs.png"),
+  tailwindcss: require("../img/tailwindcss.png"),
+  nodejs: require("../img/nodejs.png"),
 };
 
 export default images;
