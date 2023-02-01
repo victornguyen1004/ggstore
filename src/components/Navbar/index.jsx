@@ -5,6 +5,10 @@ import { useState, useEffect } from "react";
 function Navbar(props) {
   const [menu, setMenu] = useState(false);
 
+    useEffect(() => {
+      ScrollHandle();
+    }, [menu]);
+
   const HandleMenuOnclick = () => {
     if (menu) {
       setMenu(false);
@@ -13,15 +17,28 @@ function Navbar(props) {
     }
   };
 
+  const ScrollHandle = () => {
+    const navbar = document.getElementById("mynav");
+    window.onscroll = () => {
+      if (window.scrollY > window.innerHeight) {
+        navbar.classList.add("bg-[#1f1f1f]");
+      } else {
+        navbar.classList.remove("bg-[#1f1f1f]");
+      }
+    };
+  };
+
   const RenderNavbar = () => {
     if (props.variant === "about") {
       return (
-        <div className="sticky top-0 z-50 flex h-[80px] items-center justify-between bg-none px-4 text-black md:px-12  lg:px-28">
+        <div
+          id="mynav"
+          className="fixed right-0 left-0 top-0 z-50 flex h-[80px] items-center justify-between  px-4 text-black md:px-12  lg:px-28"
+        >
           <Link className="w-28" to={"/"}>
             <img src={images.logoFullwhite} alt="logo.png" className="" />
           </Link>
-
-          <div className="hidden items-center -z-1 font-semibold text-white lg:flex">
+          <div className="hidden items-center font-semibold text-white lg:flex">
             <Link to={"/"} className="mr-2 px-4 py-3">
               Home
             </Link>
@@ -51,16 +68,15 @@ function Navbar(props) {
           </div>
           <div className="flex h-full items-center lg:hidden">
             <button className="" onClick={() => HandleMenuOnclick()}>
-              <i className="fa-solid fa-bars text-white p-4 text-xl"></i>
+              <i className="fa-solid fa-bars p-4 text-xl text-white"></i>
             </button>
             {RenderMenu()}
           </div>
         </div>
       );
-    }
-    else {
+    } else {
       return (
-        <div className="sticky top-0 z-50 flex h-[80px] items-center justify-between border-b bg-[#fafafa] px-4 text-black shadow md:border-b-0 md:px-12 md:shadow-none  lg:px-28">
+        <div className="sticky top-0 left-0 right-0 z-50 flex h-[80px] items-center justify-between border-b bg-[#fafafa] px-4 text-black shadow md:border-b-0 md:px-12 md:shadow-none  lg:px-28">
           <Link className="w-28" to={"/"}>
             <img src={images.logoFull} alt="logo.png" className="" />
           </Link>
@@ -101,7 +117,7 @@ function Navbar(props) {
           </div>
         </div>
       );
-    };
+    }
   };
 
   const RenderMenu = () => {
@@ -132,30 +148,26 @@ function Navbar(props) {
           >
             Contact
           </Link>
-            <Link
-              to={"/signup"}
-              className="w-full border underline border-zinc-100 py-4 text-center "
-            >
-              Sign up
-            </Link>
-            <Link
-              to={"/signup"}
-              className="w-full border underline border-zinc-100 py-4 text-center "
-            >
-              Login
-            </Link>
+          <Link
+            to={"/signup"}
+            className="w-full border border-zinc-100 py-4 text-center underline "
+          >
+            Sign up
+          </Link>
+          <Link
+            to={"/signup"}
+            className="w-full border border-zinc-100 py-4 text-center underline "
+          >
+            Login
+          </Link>
         </div>
       );
     }
   };
 
-  useEffect(() => {}, [menu]);
 
-  return (
-    <>
-    {RenderNavbar()}
-    </>
-  );
+
+  return RenderNavbar();
 }
 
 export default Navbar;
