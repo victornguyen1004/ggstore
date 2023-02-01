@@ -25,6 +25,17 @@ function Navbar(props) {
       } else {
         navbar.classList.remove("bg-[#1f1f1f]");
       }
+      
+      if (window.scrollY > window.innerHeight - 80) {
+        navbar.classList.add("shadow-md");
+        navbar.classList.add("border-b");
+        navbar.classList.add("border-[#0c0c0c]");
+      }
+      else {
+        navbar.classList.remove("shadow-md");
+        navbar.classList.remove("border-b");
+        navbar.classList.remove("border-[#0c0c0c]");
+      }
     };
   };
 

@@ -4,9 +4,9 @@ import AboutContent from "./Content";
 
 function About() {
   return (
-    <>
-      <div className="relative bg-[#1f1f1f]">
-        <Navbar variant={"about"} />
+    <div className="relative min-h-screen w-full">
+      <Navbar variant={"about"} />
+      <div className="relative ">
         <div
           className="h-screen w-full bg-fixed md:min-h-screen"
           style={{
@@ -22,7 +22,7 @@ function About() {
       <div className="">
         <AboutContent />
       </div>
-    </>
+    </div>
   );
 }
 
