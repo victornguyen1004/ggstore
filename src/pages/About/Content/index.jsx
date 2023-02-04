@@ -74,15 +74,15 @@ function AboutContent() {
         </div>
 
         {/* ReactJS row */}
-        <div className="col-span-3 flex items-center justify-center">
+        <div className="col-span-12 md:col-span-3 flex items-center justify-center">
           <img
             src={images.reactjs}
             alt="reactjs"
             className="w-48 rounded-full text-center outline outline-1 outline-zinc-600"
           />
         </div>
-        <div className="col-span-6">
-          <div className="mb-2 text-xl font-semibold text-[#00D8FF]">
+        <div className="col-span-12 md:col-span-6">
+          <div className="mb-2 text-xl text-center md:text-left font-semibold text-[#00D8FF]">
             ReactJS
           </div>
           <div className="text-justify align-middle tracking-tighter">
@@ -94,9 +94,9 @@ function AboutContent() {
         </div>
 
         {/* TailwindCSS row */}
-        <div className="col-span-3"></div>
-        <div className="col-span-3"></div>
-        <div className="col-span-6">
+        <div className="col-span-0 md:col-span-3"></div>
+        <div className="col-span-0 md:col-span-3"></div>
+        <div className="col-span-12 md:col-span-6">
           <div className="mb-2 text-right text-xl font-semibold text-[#3FAEB0]">
             TailwindCSS
           </div>
