@@ -2,9 +2,9 @@ import images from "../../../assets/img";
 
 function AboutContent() {
   return (
-    <div className="grid w-full grid-cols-12 gap-x-0 md:gap-x-12 gap-y-16 md:gap-y-28 border-t border-[#0c0c0c] bg-[#1f1f1f] px-4 pt-48 pb-28 text-white md:px-24">
+    <div className="grid w-full grid-cols-12 gap-x-0 gap-y-16 border-t border-[#0c0c0c] bg-[#1f1f1f] px-4 pt-48 pb-28 text-white md:gap-x-12 md:gap-y-28 md:px-24">
       <div className="col-span-12 md:col-span-6">
-        <div className="pb-4 md:text-right text-2xl font-bold">
+        <div className="pb-4 text-2xl font-bold md:text-right">
           The Founder Of GGStore
         </div>
         <div className="text-justify indent-8 text-lg tracking-tighter">
@@ -15,7 +15,7 @@ function AboutContent() {
         </div>
       </div>
       <div className="col-span-12 md:col-span-6">
-        <div className="pb-4 md:text-right text-2xl font-bold">
+        <div className="pb-4 text-2xl font-bold md:text-right">
           The Creation Of GGStore
         </div>
         <div className="text-justify indent-8 text-lg tracking-tighter">
@@ -26,13 +26,13 @@ function AboutContent() {
         </div>
       </div>
 
-      <div className="col-span-12 grid grid-cols-12 gap-x-0 md:gap-x-12 gap-y-12">
+      <div className="col-span-12 grid grid-cols-12 gap-x-0 gap-y-12 md:gap-x-12">
         <div className="col-span-12 text-center text-2xl font-bold">
           For more info, hit me on
         </div>
         <a
           href="tel:0528695414"
-          className="group col-span-12 md:col-span-4 pb-4 text-center font-medium"
+          className="group col-span-12 pb-4 text-center font-medium md:col-span-4"
         >
           <span className="relative h-14 w-9">
             <i class="fa-solid fa-phone pb-4 text-4xl opacity-100 duration-200 ease-in-out group-hover:text-sky-500 group-hover:opacity-0"></i>
@@ -44,7 +44,7 @@ function AboutContent() {
         </a>
         <a
           href="mailto:quanggvuu1004@gmail.com"
-          className="group col-span-12 md:col-span-4 pb-4 text-center font-medium"
+          className="group col-span-12 pb-4 text-center font-medium md:col-span-4"
         >
           <span className="relative h-14 w-9">
             <i class="fa-solid fa-envelope pb-4 text-4xl opacity-100 duration-200 ease-in-out group-hover:text-sky-500 group-hover:opacity-0"></i>
@@ -56,7 +56,7 @@ function AboutContent() {
         </a>
         <a
           href={"/contact"}
-          className="group col-span-12 md:col-span-4 pb-4 text-center font-medium"
+          className="group col-span-12 pb-4 text-center font-medium md:col-span-4"
         >
           <span className="relative h-14 w-9">
             <i class="fa-regular fa-square pb-4 text-4xl opacity-100 duration-200 ease-in-out group-hover:text-sky-500 group-hover:opacity-0"></i>
@@ -67,14 +67,12 @@ function AboutContent() {
           </p>
         </a>
       </div>
-
-      <div className="col-span-12 grid grid-cols-12 gap-x-0 md:gap-x-12 gap-y-12">
+      <div className="col-span-12 grid grid-cols-12 gap-x-0 gap-y-12 md:gap-x-12">
         <div className="col-span-12 pb-4 text-center text-2xl font-bold">
           This Website Is Made Of
         </div>
-
         {/* ReactJS row */}
-        <div className="col-span-12 md:col-span-3 flex items-center justify-center">
+        <div className="col-span-12 flex items-center justify-center md:col-span-3">
           <img
             src={images.reactjs}
             alt="reactjs"
@@ -82,7 +80,7 @@ function AboutContent() {
           />
         </div>
         <div className="col-span-12 md:col-span-6">
-          <div className="mb-2 text-xl text-center md:text-left font-semibold text-[#00D8FF]">
+          <div className="mb-2 text-center text-xl font-semibold text-[#00D8FF] md:text-left">
             ReactJS
           </div>
           <div className="text-justify align-middle tracking-tighter">
@@ -92,12 +90,19 @@ function AboutContent() {
             smooth as butter without ReactJS.
           </div>
         </div>
-
+        <div className="col-span-0 md:col-span-3"></div>
         {/* TailwindCSS row */}
-        <div className="col-span-0 md:col-span-3"></div>
-        <div className="col-span-0 md:col-span-3"></div>
+
+        <div className="col-span-0 md:col-span-1"></div>
+        <div className="col-span-12 flex items-center justify-center md:col-span-3">
+          <img
+            src={images.tailwindcss}
+            alt="tailwindcss"
+            className="w-48 rounded-full text-center outline outline-1 outline-zinc-600"
+          />
+        </div>
         <div className="col-span-12 md:col-span-6">
-          <div className="mb-2 text-right text-xl font-semibold text-[#3FAEB0]">
+          <div className="mb-2 text-center text-xl font-semibold text-[#3FAEB0] md:text-left">
             TailwindCSS
           </div>
           <div className="text-justify align-middle tracking-tight">
@@ -108,24 +113,19 @@ function AboutContent() {
             TailwindCSS.
           </div>
         </div>
-        <div className="col-span-3 flex items-center justify-center">
-          <img
-            src={images.tailwindcss}
-            alt="tailwindcss"
-            className="w-48 rounded-full text-center outline outline-1 outline-zinc-600"
-          />
-        </div>
+        <div className="col-span-0 md:col-span-2"></div>
 
         {/* ExpressJS row */}
-        <div className="col-span-3 flex items-center justify-center">
+        <div className="col-span-0 md:col-span-2"></div>
+        <div className="col-span-12 flex items-center justify-center md:col-span-3">
           <img
             src={images.nodejs}
             alt="nodejs"
             className="w-48 rounded-full text-center outline outline-1 outline-zinc-600"
           />
         </div>
-        <div className="col-span-6">
-          <div className="mb-2 text-xl font-semibold text-[#66B748]">
+        <div className="col-span-12 md:col-span-6">
+          <div className="mb-2 text-center text-xl font-semibold text-[#66B748] md:text-left">
             NodeJS & ExpressJS
           </div>
           <div className="text-justify align-middle tracking-tighter">
@@ -136,6 +136,7 @@ function AboutContent() {
             developer.
           </div>
         </div>
+        <div className="col-span-0 md:col-span-1"></div>
       </div>
     </div>
   );
