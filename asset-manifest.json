@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/ggstore/static/css/main.bfc9aaf8.css",
+    "main.js": "/ggstore/static/js/main.fe0ee4ec.js",
+    "static/media/about.png": "/ggstore/static/media/about.2e6c7ac24438616873a7.png",
+    "static/media/webcam.png": "/ggstore/static/media/webcam.4d6cf8af6250385901d4.png",
+    "static/media/g733.png": "/ggstore/static/media/g733.1f71fc2a9d0eaf97c98a.png",
+    "static/media/banner.png": "/ggstore/static/media/banner.37e87e8fd1211170f785.png",
+    "static/media/mouse2.png": "/ggstore/static/media/mouse2.0f314f94e02d6080225c.png",
+    "static/media/hyperxcloud.png": "/ggstore/static/media/hyperxcloud.bbbc1aa5c78682713c30.png",
+    "static/media/microphone.png": "/ggstore/static/media/microphone.092a5c8c7e187cb3cbc7.png",
+    "static/media/corsairk70.png": "/ggstore/static/media/corsairk70.dfe9b70a0b91b7b21406.png",
+    "static/media/signup.png": "/ggstore/static/media/signup.4f1d31d45dd4cb9dac53.png",
+    "static/media/building.png": "/ggstore/static/media/building.73c3dfb812d735b2471f.png",
+    "static/media/mouse1.png": "/ggstore/static/media/mouse1.faedb2f368cab8d1689b.png",
+    "static/media/twitter.png": "/ggstore/static/media/twitter.b413b75b86f226240110.png",
+    "static/media/rogstrig.png": "/ggstore/static/media/rogstrig.8cf2efc15d2637aa2d77.png",
+    "static/media/mailbox.png": "/ggstore/static/media/mailbox.b8a1bf9eb18f650e1571.png",
+    "static/media/reactjs.png": "/ggstore/static/media/reactjs.72fccd16e4de9df7f9fe.png",
+    "static/media/razer.png": "/ggstore/static/media/razer.85359112bf6c93e72864.png",
+    "static/media/dottedbg.png": "/ggstore/static/media/dottedbg.8e8a9e539dfc3b030a29.png",
+    "static/media/logitech.png": "/ggstore/static/media/logitech.ee9f02bd4233057fbd99.png",
+    "static/media/rog.png": "/ggstore/static/media/rog.58237647e316d8be0557.png",
+    "static/media/asus.png": "/ggstore/static/media/asus.48d4715c8c4de83e7e60.png",
+    "static/media/abouttitle.png": "/ggstore/static/media/abouttitle.f0f2800daf486a89be2e.png",
+    "static/media/facebook.png": "/ggstore/static/media/facebook.6d04813bbf8c1bd89be5.png",
+    "static/media/hyperx.png": "/ggstore/static/media/hyperx.56417aa0767f4b0b0a25.png",
+    "static/media/corsair.png": "/ggstore/static/media/corsair.e5c764e76e272e53dfff.png",
+    "static/media/steelseries.png": "/ggstore/static/media/steelseries.e0404c81e81e9030ae9b.png",
+    "static/media/google.png": "/ggstore/static/media/google.9db27c1011edb821b59c.png",
+    "static/media/dell.png": "/ggstore/static/media/dell.5e68aaba9f583f23357e.png",
+    "static/media/nodejs.png": "/ggstore/static/media/nodejs.441584352abdfd9f55f6.png",
+    "static/media/alienware.png": "/ggstore/static/media/alienware.8cf6bfb37c847aa14c81.png",
+    "static/media/tailwindcss.png": "/ggstore/static/media/tailwindcss.91a4dc0c10c8ff484145.png",
+    "index.html": "/ggstore/index.html",
+    "main.bfc9aaf8.css.map": "/ggstore/static/css/main.bfc9aaf8.css.map",
+    "main.fe0ee4ec.js.map": "/ggstore/static/js/main.fe0ee4ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bfc9aaf8.css",
+    "static/js/main.fe0ee4ec.js"
+  ]
+}
