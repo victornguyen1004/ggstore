@@ -4,8 +4,8 @@ import { publicRoutes } from "./routes";
 function App() {
   return (
     <>
-      <Router>
-        <div className="App font-custom bg-[#fafafa] scrollbar  ">
+      <Router basename={process.env.PUBLIC_URL}>
+        <div className="App scrollbar bg-[#fafafa] font-custom  ">
           <Routes>
             {publicRoutes.map((route, index) => {
               return (
