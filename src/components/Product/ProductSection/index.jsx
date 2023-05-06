@@ -1,9 +1,27 @@
+import { useEffect, useState } from "react";
 import ProductCategory from "../ProductCategory";
 import ProductContainer from "../ProductContainer";
 import ProductItem from "../ProductItem";
 import { Link } from "react-router-dom";
+import { ApiBaseUrl } from "../../../global/global-variables";
 
 function ProductSection(props) {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    const url = `${ApiBaseUrl}/products`;
+    const fetchData = async () => {
+      try {
+        const response = await fetch(url);
+        const json = await response.json();
+        const data = json.data;
+        setProducts(data);
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+    fetchData();
+  }, []);
+
   function HandleButtonRender(props) {
     if (props.button) {
       return (
@@ -36,14 +54,14 @@ function ProductSection(props) {
         </div>
         {HandleCategoryRender(props)}
         <ProductContainer>
-          {props.products.map((product) => {
+          {products.map((product ,key) => {
             return (
               <ProductItem
-                key={product.id}
+                key={key}
                 name={product.name}
                 price={product.price}
                 rating={product.rating}
-                image={product.image}
+                image={product.imgUrl}
               />
             );
           })}

@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 function Navbar(props) {
   const [menu, setMenu] = useState(false);
 
-    useEffect(() => {
-      ScrollHandle();
-    }, [menu]);
+  useEffect(() => {
+    ScrollHandle();
+  }, [menu]);
 
   const HandleMenuOnclick = () => {
     if (menu) {
@@ -19,24 +19,25 @@ function Navbar(props) {
 
   const ScrollHandle = () => {
     const navbar = document.getElementById("mynav");
-    window.onscroll = () => {
-      if (window.scrollY > window.innerHeight) {
-        navbar.classList.add("bg-[#1f1f1f]");
-      } else {
-        navbar.classList.remove("bg-[#1f1f1f]");
-      }
-      
-      if (window.scrollY > window.innerHeight - 80) {
-        navbar.classList.add("shadow-md");
-        navbar.classList.add("border-b");
-        navbar.classList.add("border-[#0c0c0c]");
-      }
-      else {
-        navbar.classList.remove("shadow-md");
-        navbar.classList.remove("border-b");
-        navbar.classList.remove("border-[#0c0c0c]");
-      }
-    };
+    if (navbar) {
+      window.onscroll = () => {
+        if (window.scrollY > window.innerHeight) {
+          navbar.classList.add("bg-[#1f1f1f]");
+        } else {
+          navbar.classList.remove("bg-[#1f1f1f]");
+        }
+
+        if (window.scrollY > window.innerHeight - 80) {
+          navbar.classList.add("shadow-md");
+          navbar.classList.add("border-b");
+          navbar.classList.add("border-[#0c0c0c]");
+        } else {
+          navbar.classList.remove("shadow-md");
+          navbar.classList.remove("border-b");
+          navbar.classList.remove("border-[#0c0c0c]");
+        }
+      };
+    }
   };
 
   const RenderNavbar = () => {
@@ -175,8 +176,6 @@ function Navbar(props) {
       );
     }
   };
-
-
 
   return RenderNavbar();
 }
