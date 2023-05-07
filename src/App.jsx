@@ -1,7 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { publicRoutes } from "./routes";
+import AdminPanel from "./pages/AdminPanel";
+import ProtectedRoute from "./routes/ProtectedRoute";
 
 function App() {
+  const isLogged = localStorage.getItem("token");
   return (
     <>
       <Router basename={process.env.PUBLIC_URL}>
@@ -16,6 +19,14 @@ function App() {
                 />
               );
             })}
+            <Route
+              path="/admin"
+              element={
+                <ProtectedRoute isLogged={isLogged}>
+                  <AdminPanel />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </div>
       </Router>

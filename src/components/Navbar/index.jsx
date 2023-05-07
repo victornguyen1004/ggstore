@@ -1,13 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import images from "../../assets/img";
 import { useState, useEffect } from "react";
 
 function Navbar(props) {
   const [menu, setMenu] = useState(false);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     ScrollHandle();
   }, [menu]);
+
+  function logout() {
+    localStorage.removeItem("token"); // Remove token from local storage
+    localStorage.removeItem("username"); // Remove username from local storage
+    navigate("/");
+    // Additional steps to clear user data or redirect user to a different page can be added here
+  }
 
   const HandleMenuOnclick = () => {
     if (menu) {
@@ -64,19 +73,37 @@ function Navbar(props) {
               Contact
             </Link>
           </div>
-          <div className="text-mg hidden font-bold lg:block">
-            <Link
-              to={"/signup"}
-              className="mr-4 rounded-3xl border-2 border-white bg-inherit py-2 px-6 text-white shadow-sm duration-150 ease-in-out hover:bg-white hover:text-black"
-            >
-              Sign up
-            </Link>
-            <Link
-              to={"/login"}
-              className="rounded-3xl border-2 border-transparent px-6 py-2 text-white duration-300 ease-in-out hover:bg-transparent"
-            >
-              Login
-            </Link>
+          <div className="text-md hidden lg:block text-white">
+            {localStorage.getItem("token") ? (
+              <div className="text-sm">
+                Logged in as{" "}
+                <Link href="/" className="font-medium">
+                  {localStorage.getItem("username")}
+                </Link>
+                ,
+                <button
+                  onClick={logout}
+                  className="p-2 font-semibold text-red-600"
+                >
+                  Logout?
+                </button>
+              </div>
+            ) : (
+              <>
+                <Link
+                  to={"/signup"}
+                  className="mr-4 rounded-3xl border-2 border-blue-500 bg-inherit py-2 px-6 font-bold text-blue-500 shadow-sm duration-300 ease-in-out hover:bg-blue-500 hover:text-white"
+                >
+                  Sign up
+                </Link>
+                <Link
+                  to={"/login"}
+                  className="rounded-3xl border-2 border-transparent px-6 py-2 font-bold text-blue-500 duration-300 ease-in-out  hover:border-[#f3f5f9] hover:bg-[#f3f5f9]"
+                >
+                  Login
+                </Link>
+              </>
+            )}
           </div>
           <div className="flex h-full items-center lg:hidden">
             <button className="" onClick={() => HandleMenuOnclick()}>
@@ -107,19 +134,37 @@ function Navbar(props) {
               Contact
             </Link>
           </div>
-          <div className="text-mg hidden font-bold lg:block">
-            <Link
-              to={"/signup"}
-              className="mr-4 rounded-3xl border-2 border-blue-500 bg-inherit py-2 px-6 text-blue-500 shadow-sm duration-300 ease-in-out hover:bg-blue-500 hover:text-white"
-            >
-              Sign up
-            </Link>
-            <Link
-              to={"/login"}
-              className="rounded-3xl border-2 border-transparent px-6 py-2 text-blue-500 duration-300 ease-in-out  hover:border-[#f3f5f9] hover:bg-[#f3f5f9]"
-            >
-              Login
-            </Link>
+          <div className="text-md hidden lg:block">
+            {localStorage.getItem("token") ? (
+              <div className="text-sm">
+                Logged in as {" "}
+                <Link href="/" className="font-medium">
+                  {localStorage.getItem("username")}
+                </Link>
+                , 
+                <button
+                  onClick={logout}
+                  className="p-2 font-semibold text-red-600"
+                >
+                  Logout?
+                </button>
+              </div>
+            ) : (
+              <>
+                <Link
+                  to={"/signup"}
+                  className="mr-4 rounded-3xl border-2 border-blue-500 bg-inherit py-2 px-6 font-bold text-blue-500 shadow-sm duration-300 ease-in-out hover:bg-blue-500 hover:text-white"
+                >
+                  Sign up
+                </Link>
+                <Link
+                  to={"/login"}
+                  className="rounded-3xl border-2 border-transparent px-6 py-2 font-bold text-blue-500 duration-300 ease-in-out  hover:border-[#f3f5f9] hover:bg-[#f3f5f9]"
+                >
+                  Login
+                </Link>
+              </>
+            )}
           </div>
           <div className="flex h-full items-center lg:hidden">
             <button className="" onClick={() => HandleMenuOnclick()}>
@@ -160,18 +205,31 @@ function Navbar(props) {
           >
             Contact
           </Link>
-          <Link
-            to={"/signup"}
-            className="w-full border border-zinc-100 py-4 text-center underline "
-          >
-            Sign up
-          </Link>
-          <Link
-            to={"/signup"}
-            className="w-full border border-zinc-100 py-4 text-center underline "
-          >
-            Login
-          </Link>
+          {localStorage.getItem("token") ? (
+            <>
+              <button
+                onClick={logout}
+                className="w-full border border-zinc-100 py-4 text-center font-semibold text-red-500"
+              >
+                Log out
+              </button>
+            </>
+          ) : (
+            <>
+              <Link
+                to={"/signup"}
+                className="w-full border border-zinc-100 py-4 text-center underline "
+              >
+                Sign up
+              </Link>
+              <Link
+                to={"/login"}
+                className="w-full border border-zinc-100 py-4 text-center underline "
+              >
+                Login
+              </Link>
+            </>
+          )}
         </div>
       );
     }
